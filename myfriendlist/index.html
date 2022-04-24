@@ -15,9 +15,9 @@
 
 
   <!-- CSS script -->
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="stylesheet.css">
   
-  <title>My friend list</title>
+  <title>User list</title>
 </head>
 
 <body>
@@ -45,8 +45,7 @@
   <!-- search bar -->
   <div id="search-bar" class="col-4 mt-3">
     <form class="d-flex" id="search-form">
-      <input class="form-control me-2" type="search" placeholder="Name..." id="search-input" aria-label="Search" />
-      <button class="btn btn-outline-success" type="submit" id="btn-search-submit">Search</button>
+      <input class="form-control me-2" type="search" placeholder="Search by name..." id="search-input" aria-label="Search" />
     </form>
   </div>
 
@@ -81,16 +80,18 @@
 
   <!-- pagination -->
   <nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-center" id="home-pagination">
+    <ul class="pagination justify-content-center" id="paginator">
     </ul>
   </nav>
 
   <!-- axios script -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-  <!-- index.js script -->
+  <!-- javascript script -->
+  <script src="./functions.js"></script>
   <script src="./index.js"></script>
-
+ 
+  
   <!-- bootstrap script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
