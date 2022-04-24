@@ -1,0 +1,14 @@
+.card {
+  border: 0;
+  text-align: center;
+  margin: 10px;
+}
+
+.profile-card-avatar,.profile-modal-avatar {
+  border-radius:50%;
+}
+
+.btn {
+  font-size: 12px;
+  line-height: 1;
+}
