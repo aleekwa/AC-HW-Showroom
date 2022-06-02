@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: lightgray;
+}
+
+.nav-right {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.btn {
+  margin-right: 10px;
+  padding: 5px;
+  background-color: #aeaeae;
+  border-radius: 5px;
+  width: 75px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.active {
+  background-color: darkslategray;
+  color: white;
+}
