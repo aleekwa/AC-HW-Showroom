@@ -2,14 +2,21 @@
 const express = require("express");
 const app = express();
 // Define server related variables
-const port = 3000
+const port = 3000;
+
+// require express-handlebars here
+const exphbs = require("express-handlebars");
+
+// setting template engine
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // setting the route and corresponding response
-app.get('/', (req, res) => {
-  res.send(`This is my first Express Web App`)
-})
+app.get("/", (req, res) => {
+  res.render("page");
+});
 
 // Start and listen the server
 app.listen(port, () => {
-  console.log(`Express is running on http://localhost:${port}`)
-})
+  console.log(`Express is running on http://localhost:${port}`);
+});
