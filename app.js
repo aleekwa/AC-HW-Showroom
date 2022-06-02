@@ -19,6 +19,14 @@ app.get("/", (req, res) => {
   res.render("page");
 });
 
+app.get("/:page", (req, res) => {
+  // create a variable to store page clicked
+  const pageClicked = req.params.page;
+
+  // paste the page requested into 'page' partial template
+  res.render("page", { page: pageClicked });
+});
+
 // Start and listen the server
 app.listen(port, () => {
   console.log(`Express is running on http://localhost:${port}`);
