@@ -6,25 +6,44 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <script src="/app.js"></script>
 
   </head>
   <body>
     <header>
       <nav>
         <div class="nav-left">
-          <div class="btn btn-homepage">回到首頁</div>
+          <a
+            href="http://localhost:3000"
+            target=""
+            class="btn"
+            data-page = "homepage"
+          >回到首頁</a>
         </div>
         <div class="nav-right">
-          <div class="btn btn-about">About</div>
-          <div class="btn btn-porfolio">Portfolio</div>
-          <div class="btn btn-contact">Contact</div>
+          <a
+            href="http://localhost:3000/about"
+            target=""
+            class="btn"
+            data-page = "about"
+          >About</a>
+          <a
+            href="http://localhost:3000/portfolio"
+            target=""
+            class="btn"
+            data-page="portfolio"
+          >Portfolio</a>
+          <a
+            href="http://localhost:3000/contact"
+            target=""
+            class="btn"
+            data-page="contact"
+          >Contact</a>
         </div>
       </nav>
     </header>
 
     <!-- partial templates will replace the part of "body" here -->
     {{{body}}}
-
+    <script src="/javascripts/main.js"></script>
   </body>
 </html>

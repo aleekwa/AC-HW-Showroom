@@ -4,6 +4,25 @@ const app = express();
 // Define server related variables
 const port = 3000;
 
+// setting the route and corresponding response
+app.get("/", (req, res) => {
+  let page = "首頁";
+  res.render("page", { page: page });
+});
+
+app.get("/:page", (req, res) => {
+  // create a variable to store page clicked
+  page = req.params.page[0].toUpperCase() + req.params.page.substring(1);
+
+  // paste the page requested into 'page' partial template
+  res.render("page", { page: page });
+});
+
+// Start and listen the server
+app.listen(port, () => {
+  console.log(`Express is running on http://localhost:${port}`);
+});
+
 // require express-handlebars here
 const exphbs = require("express-handlebars");
 
@@ -13,21 +32,3 @@ app.set("view engine", "handlebars");
 
 // setting static files
 app.use(express.static("public"));
-
-// setting the route and corresponding response
-app.get("/", (req, res) => {
-  res.render("page");
-});
-
-app.get("/:page", (req, res) => {
-  // create a variable to store page clicked
-  const pageClicked = req.params.page;
-
-  // paste the page requested into 'page' partial template
-  res.render("page", { page: pageClicked });
-});
-
-// Start and listen the server
-app.listen(port, () => {
-  console.log(`Express is running on http://localhost:${port}`);
-});
