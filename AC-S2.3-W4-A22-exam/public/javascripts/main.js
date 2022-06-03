@@ -5,7 +5,6 @@ navButtons.forEach((button) => {
   } else {
     button.classList.remove("active");
   }
-  console.log(button.classList);
 });
 
 const navigation = document.querySelector("nav");
@@ -20,8 +19,3 @@ navigation.addEventListener("click", function (event) {
     localStorage.clear();
   }
 });
-
-console.log(localStorage.getItem("homepage"));
-console.log(localStorage.getItem("about"));
-console.log(localStorage.getItem("portfolio"));
-console.log(localStorage.getItem("contact"));
